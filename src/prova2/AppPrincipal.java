@@ -34,7 +34,6 @@ public class AppPrincipal {
 				try {
 					System.out.print("Area do "+forma.getClass().getSimpleName()+": "+forma.calcularArea()+"\n");
 				} catch (ValorNegativo e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 
@@ -46,7 +45,7 @@ public class AppPrincipal {
 
 		for(Desenho desenho : desenhos) {
 			for (Forma forma : desenho.getFormas()) {
-				if(forma.getClass() == Triangulo.class) {
+				if(forma.getClass() instanceof Triangulo.class) {
 					try {
 						System.out.print("Area do "+forma.getClass().getSimpleName()+": "+forma.calcularArea()+"\n");
 					} catch (ValorNegativo e) {
